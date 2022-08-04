@@ -86,11 +86,13 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
             print("Default identidier")
             
         case "show":
-            
             print("Show more information...")
             
         case "remind":
-            
+            let ac = UIAlertController(title: "Postponed", message: "Will be reminded later... \n (after about 24 hours)", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+
             print("Remind me letter...")
             
             
